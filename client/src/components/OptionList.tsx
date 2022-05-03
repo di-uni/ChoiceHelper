@@ -19,7 +19,8 @@ export default function OptionList(){
   };
 
   return(
-    <div style={{marginBottom: '130px'}}>
+    <div>
+    {/* <div style={{marginBottom: '130px'}}> */}
       {getOptionClouds()}
     </div>
   )

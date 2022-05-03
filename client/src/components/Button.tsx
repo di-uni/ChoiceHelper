@@ -55,7 +55,7 @@ export default function Button({buttonOption}:any){
     if(btnOpt===1){
       const pickedText = pickedOption.text;
         const pickList = clouds.map((item:any)=> item.text);
-        const shareStr:string = pickList.join() + ' 중에서 ' + pickedText + '선택완료!';
+        const shareStr:string = pickList.join() + ' 중에서 ' + pickedText + '을(를) 골라줬어요!';
       window.Kakao.Link.createDefaultButton({
         container: '#create-kakao-link-btn',
         objectType: 'feed',
