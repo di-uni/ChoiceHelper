@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import redis from 'redis';
 
 import postRoutes from './routes/posts.js'
 
@@ -25,6 +26,26 @@ const PORT = process.env.PORT || 4000;
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
     .catch((error) => console.log(error.message));
+
+
+// Redis for store the count value
+// const REDIS_URL = process.env.REDIS_URI;
+// const client = redis.createClient(REDIS_URL);
+// // const client = redis.createClient({
+// //     url: REDIS_URL,
+// //     socket: {
+// //       tls: true,
+// //       rejectUnauthorized: false
+// //     }
+// //   });
+
+// client.on('error', (err) => console.log('Redis Client Error', err));
+
+// await client.connect();
+
+// await client.set('key', 'value');
+// const value = await client.get('key');
+// console.log(value);
 
 // Got error 
 // mongoose.set('useFindAndModify', false);

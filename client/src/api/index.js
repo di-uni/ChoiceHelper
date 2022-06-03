@@ -4,6 +4,7 @@ import axios from 'axios';
 const url = 'https://choice-helper-diuni.herokuapp.com/posts';
 
 
-export const fetchPosts = () => axios.get(url);
+export const fetchRecentPosts = () => axios.get(url);
+export const getCount = () => axios.get(url + '/count');
 export const createPost = (newPost) => axios.post(url, newPost);
 // export const countPosts = () => axios.get('http://localhost:4000/posts/count')
