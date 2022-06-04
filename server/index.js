@@ -29,23 +29,25 @@ mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: tr
 
 
 // Redis for store the count value
-// const REDIS_URL = process.env.REDIS_URI;
-// const client = redis.createClient(REDIS_URL);
-// // const client = redis.createClient({
-// //     url: REDIS_URL,
-// //     socket: {
-// //       tls: true,
-// //       rejectUnauthorized: false
-// //     }
-// //   });
+// const redis_client = redis.createClient();
+const redis_client = redis.createClient({url: process.env.REDIS_URL});
+// const redis_client = redis.createClient({
+//     url: REDIS_URL,
+//     socket: {
+//       tls: true,
+//       rejectUnauthorized: false
+//     }
+//   });
 
-// client.on('error', (err) => console.log('Redis Client Error', err));
+redis_client.on('error', (err) => console.log('Redis Client Error', err));
 
-// await client.connect();
+await redis_client.connect();
 
-// await client.set('key', 'value');
-// const value = await client.get('key');
-// console.log(value);
+export default redis_client;
+
+await redis_client.set('key', 'value');
+const value = await redis_client.get('key');
+console.log(value);
 
 // Got error 
 // mongoose.set('useFindAndModify', false);

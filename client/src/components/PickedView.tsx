@@ -46,15 +46,9 @@ export default function PickedView(props:any){
     promiseFn: getData,
   });
 
-  // if count value in redis, use
-  // if not 
-  let count;
-  const { data: countDB } = useAsync({
+  const { data: count } = useAsync({
     promiseFn: getCountData,
   });
-  // const { data: count } = useAsync({
-  //   promiseFn: getCountData,
-  // });
 
   // const pickedData = data?.map((item: any)=>item.options);
   const pickedData = data ? data.map((item: any)=>item.options)

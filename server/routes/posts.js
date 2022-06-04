@@ -7,6 +7,7 @@ import { getRecentPosts, getCount, createPosts } from "../controllers/posts.js"
 const router = express.Router();
 
 // localhost:5000/posts
+
 // router.get('/', getAllPosts);
 router.get('/', getRecentPosts);
 router.get('/count', getCount);
