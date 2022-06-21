@@ -1,6 +1,10 @@
 # ChoiceHelper
 선택이 어려운 사람들을 위한 랜덤선택 서비스
 
+
+
+https://choice-helper-diuni-ksa37.netlify.app 에서 서비스를 확인할 수 있고, 배포에는 Netlify와 Heroku를 이용하였습니다.
+
 <br/><br/>
 
 ## 기술스택
@@ -50,4 +54,4 @@ Open http://localhost:3000 in browser to access this program.
 
 ## 역할 분담
 - 김수아: 프론트엔드(React js, Redux)
-- 박지윤: 백엔드(디비와 서버를 연결해서 프론트엔드로부터 데이터를 저장하거나, 프론트엔드에게 데이터를 전송)
+- 박지윤: 백엔드(디비와 서버를 연결해서 프론트엔드로부터 데이터를 저장하거나, 프론트엔드가 요청한 데이터를 전송)
